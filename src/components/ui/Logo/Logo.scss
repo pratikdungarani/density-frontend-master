@@ -1,0 +1,17 @@
+@import "../../../assets/styles/base.scss";
+
+.density {
+    &-logo{
+        flex-direction:row;
+        @include centre-align();
+    }
+    &-logo-text{
+        background-size: 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+        background-image:  $density-gradient;
+        @extend .font-strong;
+    }
+}

@@ -1,0 +1,39 @@
+
+@mixin header-font{
+    font-family: 'Overpass';
+    font-style: normal;
+}
+
+@mixin font-height-med{
+    font-size: 14px;
+    line-height: 18px;
+}
+
+@mixin font-height-large {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.font-medium{
+    @include header-font();
+    @include font-height-med();
+    width: 56px;
+    height: 18px;
+    font-weight: 500;
+}
+
+.font-bold{
+    @include header-font();
+    @include font-height-med();
+    width: 36px;
+    height: 18px;
+    font-weight: 600;
+}
+
+.font-strong{
+    @include header-font();
+    @include font-height-large();
+    width: 72px;
+    height: 21px;
+    font-weight: 700;
+}
