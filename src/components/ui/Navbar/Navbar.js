@@ -82,8 +82,8 @@ const Navbar = (props) => {
   );
 };
 
-Navbar.PropTypes = {
-  isLoggedIn: PropTypes.bool
-};
+// Navbar.PropTypes = {
+//   isLoggedIn: PropTypes.bool
+// };
 
 export default Navbar;

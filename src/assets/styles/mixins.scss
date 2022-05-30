@@ -9,3 +9,19 @@
     justify-content: space-between; 
     align-items: center;
 }
+
+
+// Font
+
+@mixin FontStyle( $fontSize: null, $lineHeight: null, $fontWeight:nulll) {
+	font-size: ($fontSize / 10)+rem;
+	line-height: ($lineHeight / 10)+rem;
+    font-weight: $fontWeight;
+}
+
+// Media Queries
+@mixin mediaQuery ($point) {
+    @media screen and (max-width:$point) {
+        @content;
+    }
+}

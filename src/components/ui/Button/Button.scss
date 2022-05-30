@@ -1,0 +1,20 @@
+@import "assets/styles/colors.scss";
+@import "assets/styles/mixins.scss";
+
+.buttonCommon{
+    border-radius: 6px;
+    padding: 13.5px;
+    display: block;
+    width: 100%;
+    @include FontStyle(13,13,700);
+    transition: 0.3s ease-in;
+    &.backround{
+        background: linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%);
+        color: $color-primary;
+        &:hover{
+            background: $color-primary;
+            color: $color-link;
+        }
+
+    }
+}

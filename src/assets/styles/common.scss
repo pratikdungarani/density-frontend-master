@@ -1,0 +1,23 @@
+button{
+    background: none;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+}
+.centre-align {
+    @include centre-align;
+}
+
+.between-align {
+    @include between-align;
+}
+
+.textPrimary {
+    color: $color-primary;
+}
+.textGray{
+    color: $primary-border-grey;
+}
+.textCenter {
+    text-align: center;
+}

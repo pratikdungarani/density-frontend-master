@@ -1,0 +1,6 @@
+@import "./../../assets/styles/colors.scss";
+.pageContent{
+    height:calc(100vh - 64px);
+    overflow: auto;
+    background: $primary-background;
+}
