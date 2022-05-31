@@ -15,6 +15,7 @@ const theme = createTheme({
       borderColor: "#101010",
       inputbackground: "#4f4f4f40",
       viewBtnBorder: "#e6ebf1",
+      disabledText: "#FCFCFC"
     },
   },
   error: {

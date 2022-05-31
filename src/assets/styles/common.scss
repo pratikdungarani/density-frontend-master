@@ -4,24 +4,21 @@ button {
     border-radius: none;
     cursor: pointer;
 }
-
+.pointer{cursor: pointer;}
 .centre-align {
     @include centre-align;
 }
-
+.between-align {
+    @include between-align;
+}
 .primaryLink {
     color: $color-link;
 }
 .textSecondary{
     color: $textSecondary;
 }
-.between-align {
-    @include between-align;
-}
-
 .textPrimary {
     color: $color-primary;
-
     svg * {
         color: $color-primary;
     }
@@ -30,12 +27,11 @@ button {
     color:$color-link;
     cursor: pointer;
 }
-.textverifie{
-    color:$color-verifie;
-    
+.success{
+    color:$color-success;
 }
-.textnotverified{
-    color:$color-notverified;
+.error{
+    color:$color-error;
 }
 .textGray {
     color: $primary-border-grey;

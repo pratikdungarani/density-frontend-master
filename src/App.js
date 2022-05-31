@@ -16,7 +16,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<Login />} />
           <Route exact path="/signup" element={<Signup />} />
-          <Route exact path='/AccountProfileKYC' element={<AccountProfileKYC/>}/>
+          <Route exact path='/accountProfileKYC' element={<AccountProfileKYC/>}/>
         </Routes>
       </BrowserRouter>
     </Layout>

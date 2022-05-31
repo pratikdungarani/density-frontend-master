@@ -1,5 +1,5 @@
-@import "./../../../../assets/styles/colors.scss";
-@import "./../../../../assets/styles/mixins.scss";
+@import "assets/styles/colors.scss";
+@import "assets/styles/mixins.scss";
 
 .loginWrap{
   .welcomeTitle{
@@ -27,9 +27,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0px 15px;
-    }
-    .Arrow{
-        cursor: pointer;
+    margin-bottom: 24px;
     }
     @include mediaQuery(767px) {
       padding: 20px;

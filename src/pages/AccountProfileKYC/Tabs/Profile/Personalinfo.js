@@ -28,23 +28,24 @@ const Signup = () => {
           <Stack direction="row" className="stack" spacing={2}>
            <Avatar className="Avatar">VK</Avatar>
           </Stack>
-          <Box className="KYCStatustitle ">
+          <Box className="between-align">
             <Box className="textPrimary">
-              <p>KYC Status</p>
+              <h6>KYC Status</h6>
             </Box>
-            <Box >
-              <p className="textnotverified">Not verified</p>
-              <p className="textverified">Verify Now</p>
-              <p className="textverifie">Verifed</p>
+            <Box className="verifiedLinks">
+              <p className="error pointer">Not verified</p>
+              <p className="primaryLink pointer">Verify Now</p>
+              <p className="success pointer">Verifed</p>
             </Box>
           </Box>
-          <CustomTextField label="First name" placeholder="John" Required />
-          <CustomTextField label="Last name" placeholder="Doe" Required />
-          <CustomTextField label="Email" placeholder="mail@abc.com" Required />
+          <CustomTextField label="First name" placeholder="John" Required disabled />
+          <CustomTextField label="Last name" placeholder="Doe" Required disabled />
+          <CustomTextField label="Email" placeholder="mail@abc.com" Required  disabled/>
           <CustomTextField
             label="Phone Number"
             placeholder="9123456789"
             Required
+            disabled
           />
          
        {

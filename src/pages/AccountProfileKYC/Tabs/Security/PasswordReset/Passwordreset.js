@@ -9,7 +9,7 @@ import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 
 import GoogleIcon from "assets/images/googleIcon.png";
 
-import { CustomTextField, CommonButton } from "../../../../components/ui/index";
+import { CustomTextField, CommonButton } from "components/ui/index";
 import { Link } from "react-router-dom";
 
 import "./Passwordreset.scss";

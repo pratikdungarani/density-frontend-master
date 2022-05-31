@@ -47,3 +47,7 @@ h4{
     @include FontStyle(24,28);
     font-weight: 700;
 }
+h6{
+    @include FontStyle(14,20);
+    font-weight: 700;
+}

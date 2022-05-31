@@ -25,6 +25,10 @@ const useStyle = makeStyles((theme) => ({
       height: "1.7em",
       color: theme.palette.primary.main,
       background: theme.palette.common.inputbackground,
+      borderRadius:"5px",
+      "&.Mui-disabled" : {
+        "-webkit-text-fill-color":theme.palette.common.disabledText,
+      }
     },
     "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
       fontSize: theme.typography.pxToRem(10),
@@ -34,6 +38,10 @@ const useStyle = makeStyles((theme) => ({
     "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
       borderColor: theme.palette.common.inputbackground,
     },
+
+    "& .MuiOutlinedInput-root.Mui-disabled .MuiOutlinedInput-notchedOutline" : {
+      borderColor: theme.palette.common.inputbackground,
+    }
   },
 }));
 export default useStyle;

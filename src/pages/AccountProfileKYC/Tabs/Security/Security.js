@@ -13,7 +13,7 @@ import { CustomTextField, CommonButton } from "components/ui/index";
 import { Link } from "react-router-dom";
 import Arrow from '../../../../assets/images/arrow'
 import "./Security.scss";
-import Passwordreset from './Passwordreset'
+import Passwordreset from './PasswordReset/Passwordreset'
 const Login = () => {
   const [isVisible, setIsVisible] = React.useState(false);
   const [isVisiblepwd, setIsVisiblepwd] = React.useState(false);
@@ -31,15 +31,16 @@ const Login = () => {
            <Box>
               <Box className="passwordreset">
                 <p>Password reset</p>
-                <span onClick={openPasswordreset} className="Arrow">
-
+                <div onClick={openPasswordreset} className="pointer centre-align">
                 <Arrow  />
-                </span>
+                </div>
 
               </Box>
               <Box className="passwordreset">
                  <p>Two Factor Authetication</p>
-                <Arrow/>
+                 <div  className="pointer centre-align">
+                  <Arrow/>
+                 </div>
 
               </Box>
            </Box>

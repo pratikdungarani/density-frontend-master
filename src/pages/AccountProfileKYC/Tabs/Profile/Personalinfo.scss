@@ -1,10 +1,9 @@
-@import "./../../../../assets/styles/colors.scss";
-@import "./../../../../assets/styles/mixins.scss";
+@import "assets/styles/colors.scss";
+@import "assets/styles/mixins.scss";
 
 .signupWrap{
     margin-top: 40px;
   .signupWrapInner {
-    
     max-width: 578px;
     width: 95%;
     padding: 64px;
@@ -43,17 +42,21 @@
     padding-top: 32px;
     padding-bottom: 32px;
     }
-   .KYCStatustitle{
-     display: flex;
-     justify-content: space-between;
-     @include FontStyle(14, 18, 700);
-   }
    .savechange{
     display: flex;
     justify-content: space-between;
     // @include FontStyle(14, 18, 700);
     color: $color-primary;
-  }
+    }
+    .verifiedLinks{
+      p{
+        @include FontStyle(14, 18, 500);
+        margin-bottom: 5px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
   }
   .LoginBtn {
     width: 100%;

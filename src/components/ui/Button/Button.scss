@@ -8,6 +8,10 @@
     width: 100%;
     @include FontStyle(18,22,700);
     transition: 0.3s ease-in;
+    @include mediaQuery(767px){
+        padding: 10px;
+        @include FontStyle(14,14,700);
+    }
     &.backround{
         background: linear-gradient(90deg, #36D1DC 0%, #5B86E5 100%);
         color: $color-primary;
@@ -15,7 +19,6 @@
             background: $color-primary;
             color: $color-link;
         }
-
     }
     &.outlined{
         border: 2px solid $color-link;
