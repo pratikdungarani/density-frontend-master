@@ -26,7 +26,17 @@ button {
         color: $color-primary;
     }
 }
-
+.textverified{
+    color:$color-link;
+    cursor: pointer;
+}
+.textverifie{
+    color:$color-verifie;
+    
+}
+.textnotverified{
+    color:$color-notverified;
+}
 .textGray {
     color: $primary-border-grey;
 }

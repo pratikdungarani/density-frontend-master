@@ -17,4 +17,8 @@
         }
 
     }
+    &.outlined{
+        border: 2px solid $color-link;
+        color: $color-link;
+    }
 }

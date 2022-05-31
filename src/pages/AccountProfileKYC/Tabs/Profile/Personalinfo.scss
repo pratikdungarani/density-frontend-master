@@ -1,0 +1,68 @@
+@import "./../../../../assets/styles/colors.scss";
+@import "./../../../../assets/styles/mixins.scss";
+
+.signupWrap{
+    margin-top: 40px;
+  .signupWrapInner {
+    
+    max-width: 578px;
+    width: 95%;
+    padding: 64px;
+    border-radius: 12px;
+    margin: 0 auto;
+    border: 1px solid $primary-border-grey;
+    .signupTitle {
+      color: $color-primary;
+      text-align: center;
+    }
+    @include mediaQuery(767px) {
+      padding: 20px;
+    }
+    .visibilityIcon {
+      svg > * {
+        fill: $color-primary;
+      }
+    }
+    .primaryLink{
+      @include FontStyle(12, 16, 400);
+    }
+    .rememberText {
+      .MuiFormControlLabel-label{
+        @include FontStyle(12, 16, 400);
+      }
+    }
+    .Avatar{
+      width: 80px;
+      height: 80px;
+      background-color: $primary-background;
+      @include FontStyle(25, 30, 400);
+      border:1px solid $borderColor;
+    }
+    .stack{
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    }
+   .KYCStatustitle{
+     display: flex;
+     justify-content: space-between;
+     @include FontStyle(14, 18, 700);
+   }
+   .savechange{
+    display: flex;
+    justify-content: space-between;
+    // @include FontStyle(14, 18, 700);
+    color: $color-primary;
+  }
+  }
+  .LoginBtn {
+    width: 100%;
+    padding: 13.5px;
+    border: 1px solid $borderColor;
+    border-radius: 5px;
+    @include FontStyle(14, 18, 700);
+    img {
+      margin-right: 10px;
+    }
+  }
+}
