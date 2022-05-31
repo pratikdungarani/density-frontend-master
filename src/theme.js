@@ -4,16 +4,16 @@ const theme = createTheme({
   palette: {
     primary: {
       main: "#ffffff",
-      default: "#1a3353", 
+      default: "#1a3353",
     },
     secondary: {
       main: "#4F4F4F",
     },
     common: {
-      subTitleColor: "#5B86E5", 
-      labelColor: "#BDBDBD", 
+      subTitleColor: "#5B86E5",
+      labelColor: "#BDBDBD",
       borderColor: "#101010",
-      inputbackground: "#4F4F4F",
+      inputbackground: "#4f4f4f40",
       viewBtnBorder: "#e6ebf1",
     },
   },

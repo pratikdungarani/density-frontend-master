@@ -14,8 +14,8 @@
 // Font
 
 @mixin FontStyle( $fontSize: null, $lineHeight: null, $fontWeight:nulll) {
-	font-size: ($fontSize / 10)+rem;
-	line-height: ($lineHeight / 10)+rem;
+	font-size: $fontSize+px;
+	line-height: $lineHeight+px;
     font-weight: $fontWeight;
 }
 

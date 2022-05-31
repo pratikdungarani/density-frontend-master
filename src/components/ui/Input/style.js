@@ -18,20 +18,21 @@ const useStyle = makeStyles((theme) => ({
     },
   },
   labelAsterisk: {
-    color: theme.error.main,
+    color: theme.palette.primary.main,
   },
   textField: {
     "& .MuiOutlinedInput-input": {
       height: "1.7em",
-      color: theme.palette.primary.main,    
+      color: theme.palette.primary.main,
+      background: theme.palette.common.inputbackground,
     },
     "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
       fontSize: theme.typography.pxToRem(10),
-      borderColor: theme.palette.primary.main,
+      borderColor: theme.palette.common.inputbackground,
       borderRadius: 5,
     },
     "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-      borderColor: theme.palette.primary.main,
+      borderColor: theme.palette.common.inputbackground,
     },
   },
 }));

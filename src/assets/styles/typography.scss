@@ -31,10 +31,19 @@
     @include font-height-large();
     font-weight: 700;
 }
+
+// h1 to h6 tag
 h1{
-    @include FontStyle(24,36);
+    @include FontStyle(35,44);
     font-weight: 700;
-    @include mediaQuery(767px){
-        @include FontStyle(18,22);
+    @include mediaQuery(991px){
+        @include FontStyle(30,36);
     }
+    @include mediaQuery(767px){
+        @include FontStyle(24,30);
+    }
+}
+h4{
+    @include FontStyle(24,28);
+    font-weight: 700;
 }
