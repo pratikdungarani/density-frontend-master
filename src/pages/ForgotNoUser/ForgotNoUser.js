@@ -6,9 +6,9 @@ import { CustomTextField, CommonButton, CustomSelectField } from "components/ui/
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 
-import "./forgot-user-email.scss";
+import "./forgot-no-user.scss";
 
-const ForgotUserEmail = () => {
+const ForgotNoUser = () => {
 	
 	return (
 		<React.Fragment>
@@ -18,20 +18,19 @@ const ForgotUserEmail = () => {
 					
 					<Box>
 						<FormControlLabel
-							control={<Checkbox defaultChecked size="small" />}
+							control={<Checkbox size="small" />}
 							label="I remember my user ID"
 							className="textPrimary rememberText"
 							/>
 					</Box>
 					<Box>
 						<FormControlLabel
-							control={<Checkbox size="small" />}
+							control={<Checkbox defaultChecked size="small" />}
 							label="I forgot my user ID"
 							className="textPrimary rememberText"
 						/>
 					</Box>
-					
-					<CustomTextField label="User ID" placeholder="Enter User ID here" />
+					 
 					<CustomTextField label="PAN" placeholder="ABCDE1234F" />
 					<CustomSelectField label="Receive on" placeholder="mail@abc.com" />
 					
@@ -47,4 +46,4 @@ const ForgotUserEmail = () => {
 	);
 };
 
-export default ForgotUserEmail;
+export default ForgotNoUser;
