@@ -25,9 +25,12 @@
 .error{ color:$color-error; }
 .textGray { color: $primary-border-grey; }
 
+.textSmall { @include FontStyle(12, 16, 600); }
+
 // Align Text 
 .textCenter { text-align: center; }
 .textRight { text-align: right; }
+
 // Buttons css
 button {
     background: none;

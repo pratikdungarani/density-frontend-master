@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-const font =   "'Overpass', sans-serif";
+const font = "'Overpass', sans-serif";
 
 const theme = createTheme({
   typography: {
