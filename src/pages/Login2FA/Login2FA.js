@@ -19,6 +19,9 @@ function Login2FA() {
         </Stack>
         <Box sx={{mb:4}}>
             <CustomTextField label="Authenticator TOTP" placeholder="Enter OTP here"  />
+            <Box className="textRight">
+              <Link to="/" className="link" > Forgot 2FA? </Link>
+            </Box>
         </Box>
         <Box>
           <CommonButton className="backround" label= "Login" />
