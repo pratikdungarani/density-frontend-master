@@ -75,7 +75,7 @@ const Login = () => {
           Not Registered Yet?{" "}
           <Link to="/signup" className="primaryLink">
             Create an account
-          </Link>{" "}
+          </Link>
         </Box>
       </Box>
     </>

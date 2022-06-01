@@ -89,7 +89,7 @@ const Signup = () => {
           Already a user?{" "}
           <Link to="/" className="primaryLink">
             Login here
-          </Link>{" "}
+          </Link>
         </Box>
       </Box>
     </>

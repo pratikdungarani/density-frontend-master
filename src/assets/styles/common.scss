@@ -45,6 +45,7 @@ button {
     width: 100%;
     @include FontStyle(18,22,700);
     transition: 0.3s ease-in;
+    text-align: center;
     @include mediaQuery(767px){
         padding: 10px;
         @include FontStyle(14,14,700);
