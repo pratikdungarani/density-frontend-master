@@ -2,10 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 //material UI
-import { InputLabel, TextField } from "@mui/material";
-import MenuItem from '@mui/material/MenuItem';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-
+import { InputLabel } from "@mui/material";
+import Select from '@mui/material/Select';
 
 //style
 import useStyles from "./style";
@@ -16,8 +14,11 @@ const CustomSelectField = ({
   multiline,
   rows,
   Required,
+  children,
+  value,
   ...rest
 }) => {
+
   const classes = useStyles();
 
   const configSelectField = {
@@ -48,10 +49,9 @@ const CustomSelectField = ({
         fullWidth
         multiline={multiline}
         rows={rows}
-        value={'email'}
+        value={value}
       >
-        <MenuItem value={'email'}>E-mail</MenuItem>
-        <MenuItem value={'sms'}>SMS</MenuItem>
+        {children}
       </Select>
     
     </React.Fragment>

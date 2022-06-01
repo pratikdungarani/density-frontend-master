@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import { CustomTextField, CommonButton, CustomSelectField } from "components/ui/index";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import MenuItem from '@mui/material/MenuItem';
 
 import "./forgot-user-email.scss";
 
@@ -33,7 +34,11 @@ const ForgotUserEmail = () => {
 					
 					<CustomTextField label="User ID" placeholder="Enter User ID here" />
 					<CustomTextField label="PAN" placeholder="ABCDE1234F" />
-					<CustomSelectField label="Receive on" placeholder="mail@abc.com" />
+
+					<CustomSelectField label="Receive on*" placeholder="mail@abc.com" value="email">
+						<MenuItem value={'email'}>E-mail</MenuItem>
+						<MenuItem value={'sms'}>sms</MenuItem>
+					</CustomSelectField>
 					
 					<CustomTextField label="E-mail (as on account)" placeholder="mail@abc.com" />
 					<CustomTextField label="Phone number (as on account)" placeholder="9123456789" />

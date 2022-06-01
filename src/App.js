@@ -18,6 +18,9 @@ import ForgotUserEmail from "pages/ForgotUserEmail/ForgotUserEmail";
 import ForgotPassword from "pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "pages/ResetPassword/ResetPassword";
 import ForgotNoUser from "pages/ForgotNoUser/ForgotNoUser";
+import AddBankAccount from "pages/AddBankAccount/AddBankAccount";
+import BankAccount from "pages/BankAccount/BankAccount";
+import BankAccounts from "pages/BankAccounts/BankAccounts";
 
 const App = () => {
   return (
@@ -41,6 +44,9 @@ const App = () => {
             />
             <Route exact path="/forgot-password" element={<ForgotPassword />} />
             <Route exact path="/reset-password" element={<ResetPassword />} />
+            <Route exact path="/add-bank-account" element={<AddBankAccount />} />
+            <Route exact path="/bank-account" element={<BankAccount />} />
+            <Route exact path="/bank-accounts" element={<BankAccounts />} />
           </Routes>
         </BrowserRouter>
       </Layout>
