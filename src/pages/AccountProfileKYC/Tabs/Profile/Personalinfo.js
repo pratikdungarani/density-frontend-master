@@ -22,10 +22,10 @@ const Signup = () => {
 
   return (
     <>
-      <Box className="signupWrap">
-        <Box className="signupWrapInner">
-          <h1 className="signupTitle">Personal Information</h1>
-          <Stack direction="row" className="stack" spacing={2}>
+      <Box className="profileInfo">
+        <Box className="profileInfoInner">
+          <h1 className="profileInfoTitle">Personal Information</h1>
+          <Stack direction="row" className="stack" >
            <Avatar className="Avatar">VK</Avatar>
           </Stack>
           <Box className="between-align">
@@ -51,14 +51,14 @@ const Signup = () => {
        {
          isVisible ?  
          <Box sx={{ mt: 4 }}>
-            <CommonButton label="Edite Profile" outlined="outlined" onChange={handleclick}/>
+            <CommonButton label="Edite Profile" className="outlined" onChange={handleclick}/>
          </Box> :
          <Box className="savechange">
            <Box sx={{ mt: 4 }}>
              <p onClick={handlecancel} className="textverified">Cancel</p>
            </Box>
            <Box sx={{ mt: 4 }}>
-             <CommonButton label="Save Change" backround="backround" onChange={handleclick}/>
+             <CommonButton label="Save Change" className="backround" onChange={handleclick}/>
            </Box>   
          </Box>
        }

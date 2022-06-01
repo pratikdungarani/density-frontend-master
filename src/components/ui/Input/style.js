@@ -11,10 +11,8 @@ const useStyle = makeStyles((theme) => ({
     "&.MuiInputLabel-root": {
       marginTop: theme.spacing(2.5),
       color: theme.palette.primary.main,
-      fontWeight: theme.typography.fontWeightMedium,
+      fontWeight: theme.typography.fontWeightBold,
       fontSize: theme.typography.pxToRem(14),
-      fontVariant: "tabular-nums",
-      fontFeatureSettings: "tnum",
     },
   },
   labelAsterisk: {

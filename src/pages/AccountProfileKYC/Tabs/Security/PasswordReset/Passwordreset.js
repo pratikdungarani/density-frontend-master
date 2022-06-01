@@ -14,19 +14,16 @@ import { Link } from "react-router-dom";
 
 import "./Passwordreset.scss";
 
-const Login = ({openPasswordreset}) => {
+const Login = ({ openPasswordreset }) => {
   const [isVisible, setIsVisible] = React.useState(false);
   const [isVisiblenew, setIsVisiblenew] = React.useState(false);
   const [isVisibleconfirm, setIsVisibleconfirm] = React.useState(false);
-  const handleclick=()=>{
-
-  }
+  const handleclick = () => {};
   return (
     <>
-      <Box className="loginWrap">
-       
-        <Box className="loginWrapInner">
-        <h1 className="loginTitle">Reset Password</h1>
+      <Box className="security">
+        <Box className="securityInner">
+          <h1 className="securityTitle">Reset Password</h1>
           <CustomTextField
             name="oldpassword"
             type={isVisible ? "text" : "password"}
@@ -50,7 +47,7 @@ const Login = ({openPasswordreset}) => {
               ),
             }}
           />
-           <CustomTextField
+          <CustomTextField
             name="Newpassword"
             type={isVisiblenew ? "text" : "password"}
             id="Newpassword"
@@ -73,7 +70,7 @@ const Login = ({openPasswordreset}) => {
               ),
             }}
           />
-           <CustomTextField
+          <CustomTextField
             name="Confirmpassword"
             type={isVisibleconfirm ? "text" : "password"}
             id="Confirmpassword"
@@ -96,9 +93,13 @@ const Login = ({openPasswordreset}) => {
               ),
             }}
           />
-           <Box sx={{ mt: 4 }}>
-             <CommonButton label="Password Reset" backround="backround" onChange={openPasswordreset}/>
-           </Box>   
+          <Box sx={{ mt: 4 }}>
+            <CommonButton
+              label="Password Reset"
+              className="backround"
+              onChange={openPasswordreset}
+            />
+          </Box>
         </Box>
       </Box>
     </>

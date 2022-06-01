@@ -1,55 +1,56 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import { IconButton, InputAdornment } from "@mui/material";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-// MUI Icons
-import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
-import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 
-import GoogleIcon from "assets/images/googleIcon.png";
-
-import { CustomTextField, CommonButton } from "components/ui/index";
-import { Link } from "react-router-dom";
-import Arrow from '../../../../assets/images/arrow'
+import Arrow from "assets/images/arrow";
 import "./Security.scss";
-import Passwordreset from './PasswordReset/Passwordreset'
+import Passwordreset from "./PasswordReset/Passwordreset";
+import TwoFactorAuth from "./TwoFactorAuth/TwoFactorAuth";
+
 const Login = () => {
-  const [isVisible, setIsVisible] = React.useState(false);
   const [isVisiblepwd, setIsVisiblepwd] = React.useState(false);
-  const openPasswordreset=()=>{
-    setIsVisiblepwd(!isVisiblepwd)
-  }
+  const [authVisible, setAuthVisible] = React.useState(false);
+
+  const openPasswordreset = () => {
+    setIsVisiblepwd(!isVisiblepwd);
+  };
+
+  const openAuthentication = () => {
+    setAuthVisible(!authVisible);
+  };
+
   return (
-    <>{
-        isVisiblepwd ?  
-        <Passwordreset openPasswordreset={openPasswordreset}/> :
+    <>
+      {!(isVisiblepwd || authVisible) && (
         <>
-        <Box className="loginWrap">
-        <Box className="loginWrapInner">
-            <h1 className="loginTitle">Security</h1>
-           <Box>
-              <Box className="passwordreset">
-                <p>Password reset</p>
-                <div onClick={openPasswordreset} className="pointer centre-align">
-                <Arrow  />
-                </div>
-
+          <Box className="security">
+            <Box className="securityInner">
+              <h1 className="securityTitle">Security</h1>
+              <Box>
+                <Box className="passwordreset">
+                  <p>Password reset</p>
+                  <div
+                    onClick={openPasswordreset}
+                    className="pointer centre-align"
+                  >
+                    <Arrow />
+                  </div>
+                </Box>
+                <Box className="passwordreset">
+                  <p>Two Factor Authetication</p>
+                  <div
+                    className="pointer centre-align"
+                    onClick={openAuthentication}
+                  >
+                    <Arrow />
+                  </div>
+                </Box>
               </Box>
-              <Box className="passwordreset">
-                 <p>Two Factor Authetication</p>
-                 <div  className="pointer centre-align">
-                  <Arrow/>
-                 </div>
-
-              </Box>
-           </Box>
-        </Box>
-      </Box>
-      </>
-    }
-      
-     
+            </Box>
+          </Box>
+        </>
+      )}
+      {isVisiblepwd && <Passwordreset openPasswordreset={openPasswordreset} />}
+      {authVisible && <TwoFactorAuth openAuthentication={openAuthentication} />}
     </>
   );
 };

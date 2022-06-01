@@ -1,18 +1,19 @@
 @import "assets/styles/colors.scss";
 @import "assets/styles/mixins.scss";
 
-.signupWrap{
+.profileInfo{
     margin-top: 40px;
-  .signupWrapInner {
+  .profileInfoInner {
     max-width: 578px;
     width: 95%;
     padding: 64px;
     border-radius: 12px;
     margin: 0 auto;
     border: 1px solid $primary-border-grey;
-    .signupTitle {
+    .profileInfoTitle {
       color: $color-primary;
       text-align: center;
+      margin-bottom: 32px;
     }
     @include mediaQuery(767px) {
       padding: 20px;
@@ -39,7 +40,6 @@
     }
     .stack{
     justify-content: center;
-    padding-top: 32px;
     padding-bottom: 32px;
     }
    .savechange{

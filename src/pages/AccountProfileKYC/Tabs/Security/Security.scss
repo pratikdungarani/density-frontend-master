@@ -1,21 +1,22 @@
 @import "assets/styles/colors.scss";
 @import "assets/styles/mixins.scss";
 
-.loginWrap{
+.security{
   .welcomeTitle{
     margin: 60px 0 30px;
   }
 
-  .loginWrapInner {
+  .securityInner {
     max-width: 548px;
     width: 95%;
     padding: 64px;
     border-radius: 12px;
     margin: 0 auto;
     border: 1px solid $primary-border-grey;
-    .loginTitle {
+    .securityTitle {
       color: $color-primary;
       text-align: center;
+      margin-bottom: 30px;
     }
     .passwordreset{
     border: 1px solid $primary-border-grey;

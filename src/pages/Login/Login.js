@@ -68,7 +68,7 @@ const Login = () => {
             </button>
           </Box>
           <Box sx={{ mt: 4 }}>
-            <CommonButton label="Login" backround={"backround"} />
+            <CommonButton label="Login" className={"backround"} />
           </Box>
         </Box>
         <Box sx={{ my: 3 }} className="textSecondary textCenter">

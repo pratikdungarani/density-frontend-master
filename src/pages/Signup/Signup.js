@@ -82,7 +82,7 @@ const Signup = () => {
             }}
           />
           <Box sx={{ mt: 4 }}>
-            <CommonButton label="Sign Up" backround={"backround"} />
+            <CommonButton label="Sign Up" className={"backround"} />
           </Box>
         </Box>
         <Box sx={{ my: 3 }} className="textSecondary textCenter">
