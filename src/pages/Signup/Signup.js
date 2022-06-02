@@ -11,8 +11,7 @@ import "./signup.scss";
 
 const Signup = () => {
   const [isVisible, setIsVisible] = React.useState(false);
-  const [isVisibleConfirmPassword, setIsVisibleConfirmPassword] =
-    React.useState(false);
+  const [isVisibleConfirmPassword, setIsVisibleConfirmPassword] = React.useState(false);
 
   return (
     <>
@@ -22,15 +21,8 @@ const Signup = () => {
           <CustomTextField label="First name" placeholder="John" Required />
           <CustomTextField label="Last name" placeholder="Doe" Required />
           <CustomTextField label="Email" placeholder="mail@abc.com" Required />
-          <CustomTextField
-            label="Phone Number"
-            placeholder="9123456789"
-            Required
-          />
-          <CustomTextField
-            label="Referral Code(Optional)"
-            placeholder="ABC1245AS"
-          />
+          <CustomTextField label="Phone Number" placeholder="9123456789" Required />
+          <CustomTextField label="Referral Code(Optional)" placeholder="ABC1245AS" />
           <CustomTextField
             name="password"
             type={isVisible ? "text" : "password"}
@@ -40,19 +32,11 @@ const Signup = () => {
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
-                  <IconButton
-                    onClick={() => setIsVisible(!isVisible)}
-                    edge="end"
-                    className="visibilityIcon"
-                  >
-                    {isVisible ? (
-                      <VisibilityOffOutlinedIcon />
-                    ) : (
-                      <VisibilityOutlinedIcon />
-                    )}
+                  <IconButton onClick={() => setIsVisible(!isVisible)} edge="end" className="visibilityIcon">
+                    {isVisible ? <VisibilityOffOutlinedIcon /> : <VisibilityOutlinedIcon />}
                   </IconButton>
                 </InputAdornment>
-              ),
+              )
             }}
           />
           <CustomTextField
@@ -64,21 +48,11 @@ const Signup = () => {
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
-                  <IconButton
-                    onClick={() =>
-                      setIsVisibleConfirmPassword(!isVisibleConfirmPassword)
-                    }
-                    edge="end"
-                    className="visibilityIcon"
-                  >
-                    {isVisibleConfirmPassword ? (
-                      <VisibilityOffOutlinedIcon />
-                    ) : (
-                      <VisibilityOutlinedIcon />
-                    )}
+                  <IconButton onClick={() => setIsVisibleConfirmPassword(!isVisibleConfirmPassword)} edge="end" className="visibilityIcon">
+                    {isVisibleConfirmPassword ? <VisibilityOffOutlinedIcon /> : <VisibilityOutlinedIcon />}
                   </IconButton>
                 </InputAdornment>
-              ),
+              )
             }}
           />
           <Box sx={{ mt: 4 }}>
