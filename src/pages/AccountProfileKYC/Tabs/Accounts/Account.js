@@ -4,40 +4,70 @@ import AddBankAccount from "./AddBankAccount/AddBankAccount";
 import BankAccount from "./BankAccount/BankAccount";
 import BankAccounts from "./BankAccounts/BankAccounts";
 import Arrow from "assets/images/arrow";
-import {CommonButton} from "components/ui/index";
-
+import { CommonButton } from "components/ui/index";
 const Account = () => {
-  const [addedAccounts, setAddedAccounts] = useState(false);
+  const [addedAccounts, setAddedAccount] = useState(true);
+  const [accountsList, setAccountsList] = useState(false);
+  const [accountFirst, setAccountFirst] = useState(false);
+  const [accountNew, setAccountNew] = useState(false);
+    
+  const addBankAccount = () => {
+    setAddedAccount(!addedAccounts);
+    setAccountsList(!accountsList)
+  }
+
+  const AccountFirst = () => {
+    setAccountFirst(!accountFirst)
+    setAccountsList(false)
+    setAddedAccount(false)
+  }
+
+  const AccountNew = () => {
+    setAccountFirst(false)
+    setAccountsList(false)
+    setAddedAccount(false)
+    setAccountNew(!accountNew)
+  }
+
   return (
     <>
-      <BankAccounts />
-      <Box className="security">
+    {
+        addedAccounts && <BankAccounts addedAccounts={addedAccounts} addBankAccount={() => addBankAccount()} />
+    }
+
+    {accountsList && (
+    <Box className="security">
         <Box className="securityInner">
-          <h1 className="securityTitle">Bank Accounts</h1>
-          <Box>
+        <h1 className="securityTitle">Bank Accounts</h1>
+        <Box>
             <Box className="passwordreset">
-              <p>Account Name 1</p>
-              <div className="pointer centre-align">
+            <p>Account Name 1</p>
+            <div className="pointer centre-align" onClick={() => AccountFirst()}>
                 <Arrow />
-              </div>
+            </div>
             </Box>
             <Box className="passwordreset">
-              <p>Account Name 2</p>
-              <div className="pointer centre-align">
+            <p>Account Name 2</p>
+            <div className="pointer centre-align" onClick={() => AccountFirst()}>
                 <Arrow />
-              </div>
+            </div>
             </Box>
             <Box sx={{ mt: 4 }}>
-              <CommonButton label="Add bank Account" className={"backround"} />
+            <CommonButton label="Add bank Account" className={"backround"} onClick={() => AccountNew()} />
             </Box>
-          </Box>
         </Box>
-      </Box>
+        </Box>
+    </Box>
+    )}
 
-      <AddBankAccount />
-      <BankAccount />
+    {
+        accountFirst && <AddBankAccount />
+    }
+
+    {
+        accountNew && <BankAccount />
+    }
     </>
   );
 };
-
 export default Account;

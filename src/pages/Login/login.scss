@@ -2,10 +2,16 @@
 @import "assets/styles/mixins.scss";
 
 .loginWrap{
-  .welcomeTitle{
-    margin: 60px 0 30px;
+  margin-top: 60px;
+  @include mediaQuery(767px) {
+    margin-top: 20px;
   }
-
+  .welcomeTitle{
+    margin-bottom: 30px;
+    @include mediaQuery(767px) {
+      margin-bottom: 15px;
+    }
+  }
   .loginWrapInner {
     max-width: 548px;
     width: 95%;
@@ -16,6 +22,10 @@
     .loginTitle {
       color: $color-primary;
       text-align: center;
+      margin-bottom: 25px;
+      @include mediaQuery(767px) {
+        margin-bottom: 15px;
+      }
     }
     @include mediaQuery(767px) {
       padding: 20px;

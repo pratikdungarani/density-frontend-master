@@ -16,13 +16,12 @@ const CustomSelectField = ({
   Required,
   children,
   value,
-  ...rest
+  
 }) => {
 
   const classes = useStyles();
 
   const configSelectField = {
-    ...rest,
     size: "small",
     multiline: multiline,
     rows: rows,
@@ -43,8 +42,6 @@ const CustomSelectField = ({
       </InputLabel>
 
       <Select
-        {...rest}
-        className={classes.selectField}
         {...configSelectField}
         fullWidth
         multiline={multiline}

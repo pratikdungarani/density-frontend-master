@@ -15,7 +15,7 @@ const Signup = () => {
 
   return (
     <>
-      <Box className="signupWrap">
+       <Box className="signupWrap">
         <Box className="signupWrapInner">
           <h1 className="signupTitle">New user? Get started now</h1>
           <CustomTextField label="First name" placeholder="John" Required />
