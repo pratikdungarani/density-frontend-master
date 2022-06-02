@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-//material UI
+// material UI
 import { InputLabel } from "@mui/material";
-import Select from '@mui/material/Select';
+import Select from "@mui/material/Select";
 
-//style
+// style
 import useStyles from "./style";
 
 const CustomSelectField = ({
@@ -15,10 +15,8 @@ const CustomSelectField = ({
   rows,
   Required,
   children,
-  value,
-  
+  value
 }) => {
-
   const classes = useStyles();
 
   const configSelectField = {
@@ -26,7 +24,7 @@ const CustomSelectField = ({
     multiline: multiline,
     rows: rows,
     className: classes.textField,
-    variant: "outlined",
+    variant: "outlined"
   };
 
   return (
@@ -35,7 +33,7 @@ const CustomSelectField = ({
         required={Required}
         className={classes.inputLabel}
         classes={{
-          asterisk: classes.labelAsterisk,
+          asterisk: classes.labelAsterisk
         }}
       >
         {label}
@@ -50,7 +48,6 @@ const CustomSelectField = ({
       >
         {children}
       </Select>
-    
     </React.Fragment>
   );
 };
@@ -62,6 +59,8 @@ CustomSelectField.propTypes = {
   rows: PropTypes.number,
   Required: PropTypes.bool,
   rest: PropTypes.object,
+  children: PropTypes.element,
+  value: PropTypes.any
 };
 
 CustomSelectField.defaultProps = {
@@ -70,7 +69,7 @@ CustomSelectField.defaultProps = {
   multiline: false,
   Required: false,
   rows: 1,
-  rest: {},
+  rest: {}
 };
 
 export default CustomSelectField;

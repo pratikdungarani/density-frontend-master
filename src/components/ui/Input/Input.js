@@ -1,11 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-//material UI
+// material UI
 import { InputLabel, TextField } from "@mui/material";
 
-
-//style
+// style
 import useStyles from "./style";
 
 const CustomTextField = ({
@@ -24,7 +23,7 @@ const CustomTextField = ({
     multiline: multiline,
     rows: rows,
     className: classes.textField,
-    variant: "outlined",
+    variant: "outlined"
   };
 
   return (
@@ -33,7 +32,7 @@ const CustomTextField = ({
         required={Required}
         className={classes.inputLabel}
         classes={{
-          asterisk: classes.labelAsterisk,
+          asterisk: classes.labelAsterisk
         }}
       >
         {label}
@@ -43,8 +42,8 @@ const CustomTextField = ({
         className={classes.textField}
         FormHelperTextProps={{
           classes: {
-            root: classes.helperText,
-          },
+            root: classes.helperText
+          }
         }}
         {...configTextField}
         fullWidth
@@ -61,7 +60,7 @@ CustomTextField.propTypes = {
   multiline: PropTypes.bool,
   rows: PropTypes.number,
   Required: PropTypes.bool,
-  rest: PropTypes.object,
+  rest: PropTypes.object
 };
 
 CustomTextField.defaultProps = {
@@ -70,7 +69,7 @@ CustomTextField.defaultProps = {
   multiline: false,
   Required: false,
   rows: 1,
-  rest: {},
+  rest: {}
 };
 
 export default CustomTextField;

@@ -7,7 +7,7 @@ import TabPanel from "@mui/lab/TabPanel";
 import PersonalInfo from "./Tabs/Profile/Personalinfo";
 import Security from "./Tabs/Security/Security";
 import AccountKYC from "./Tabs/AccountKYC/AccountKYC";
-import Account from './Tabs/Accounts/Account'
+import Account from "./Tabs/Accounts/Account";
 
 import "./AccountProfileKYC.scss";
 export default function LabTabs() {
@@ -20,7 +20,7 @@ export default function LabTabs() {
     { label: "Profile", value: "1" },
     { label: "Security", value: "2" },
     { label: "KYC", value: "3" },
-    { label: "Accounts", value: "4" },
+    { label: "Accounts", value: "4" }
   ];
 
   return (
@@ -34,7 +34,7 @@ export default function LabTabs() {
           >
             {List.map((item) => {
               return (
-                <Tab label={item.label} value={item.value} className="Tab" />
+                <Tab label={item.label} value={item.value} className="Tab" key={item.label} />
               );
             })}
           </TabList>

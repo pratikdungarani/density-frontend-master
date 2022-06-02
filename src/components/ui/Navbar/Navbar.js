@@ -6,7 +6,6 @@ import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import { AppBar, Toolbar, IconButton, Typography } from "@mui/material";
 import "./Navbar.scss";
 import { Logo } from "../Logo";
-import PropTypes from "prop-types";
 
 const Navbar = (props) => {
   // eslint-disable-next-line react/prop-types

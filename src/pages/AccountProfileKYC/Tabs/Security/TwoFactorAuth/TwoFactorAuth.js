@@ -2,11 +2,9 @@ import React from "react";
 import "./TwoFactorAuth.scss";
 import Box from "@mui/material/Box";
 import Authenticat from "assets/images/Authenticat";
-import { CommonButton } from "components/ui/index";
 import { Link } from "react-router-dom";
 
-
-const TwoFactorAuth = ({ openAuthentication }) => {
+const TwoFactorAuth = () => {
   return (
     <>
       <Box className="securityAuth">

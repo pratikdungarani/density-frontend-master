@@ -10,29 +10,29 @@ const Account = () => {
   const [accountsList, setAccountsList] = useState(false);
   const [accountFirst, setAccountFirst] = useState(false);
   const [accountNew, setAccountNew] = useState(false);
-    
+
   const addBankAccount = () => {
     setAddedAccount(!addedAccounts);
-    setAccountsList(!accountsList)
-  }
+    setAccountsList(!accountsList);
+  };
 
   const AccountFirst = () => {
-    setAccountFirst(!accountFirst)
-    setAccountsList(false)
-    setAddedAccount(false)
-  }
+    setAccountFirst(!accountFirst);
+    setAccountsList(false);
+    setAddedAccount(false);
+  };
 
   const AccountNew = () => {
-    setAccountFirst(false)
-    setAccountsList(false)
-    setAddedAccount(false)
-    setAccountNew(!accountNew)
-  }
+    setAccountFirst(false);
+    setAccountsList(false);
+    setAddedAccount(false);
+    setAccountNew(!accountNew);
+  };
 
   return (
     <>
     {
-        addedAccounts && <BankAccounts addedAccounts={addedAccounts} addBankAccount={() => addBankAccount()} />
+      addedAccounts && <BankAccounts addedAccounts={addedAccounts} addBankAccount={() => addBankAccount()} />
     }
 
     {accountsList && (

@@ -1,24 +1,22 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import { IconButton, InputAdornment } from "@mui/material";
-// MUI Icons
-import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
-import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
+
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
 import { CustomTextField, CommonButton } from "components/ui/index";
-import { Link } from "react-router-dom";
+
 import "./Personalinfo.scss";
 
 const Signup = () => {
   const [isVisible, setIsVisible] = React.useState(true);
-  
- const handleclick=()=>{
-  setIsVisible(false)
- }
- const handlecancel =()=>{
-  setIsVisible(true)
- }
+
+  const handleclick = () => {
+    setIsVisible(false);
+  };
+
+  const handlecancel = () => {
+    setIsVisible(true);
+  };
 
   return (
     <>
@@ -40,28 +38,28 @@ const Signup = () => {
           </Box>
           <CustomTextField label="First name" placeholder="John" Required disabled />
           <CustomTextField label="Last name" placeholder="Doe" Required disabled />
-          <CustomTextField label="Email" placeholder="mail@abc.com" Required  disabled/>
+          <CustomTextField label="Email" placeholder="mail@abc.com" Required disabled/>
           <CustomTextField
             label="Phone Number"
             placeholder="9123456789"
             Required
             disabled
           />
-         
-       {
-         isVisible ?  
-         <Box sx={{ mt: 4 }}>
+
+        {
+          isVisible
+            ? <Box sx={{ mt: 4 }}>
             <CommonButton label="Edite Profile" className="outlined" onChange={handleclick}/>
-         </Box> :
-         <Box className="savechange">
-           <Box sx={{ mt: 4 }}>
-             <p onClick={handlecancel} className="textverified">Cancel</p>
-           </Box>
-           <Box sx={{ mt: 4 }}>
-             <CommonButton label="Save Change" className="backround" onChange={handleclick}/>
-           </Box>   
-         </Box>
-       }
+          </Box>
+            : <Box className="savechange">
+            <Box sx={{ mt: 4 }}>
+              <p onClick={handlecancel} className="textverified">Cancel</p>
+            </Box>
+            <Box sx={{ mt: 4 }}>
+              <CommonButton label="Save Change" className="backround" onChange={handleclick}/>
+            </Box>
+          </Box>
+        }
         </Box>
       </Box>
     </>

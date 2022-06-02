@@ -38,14 +38,13 @@ const Login = () => {
                     edge="end"
                     className="visibilityIcon"
                   >
-                    {isVisible ? (
-                      <VisibilityOffOutlinedIcon />
-                    ) : (
-                      <VisibilityOutlinedIcon />
-                    )}
+                    {isVisible
+                      ? <VisibilityOffOutlinedIcon />
+                      : <VisibilityOutlinedIcon />
+                    }
                   </IconButton>
                 </InputAdornment>
-              ),
+              )
             }}
           />
           <div className="between-align">

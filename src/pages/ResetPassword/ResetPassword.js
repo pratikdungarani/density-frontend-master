@@ -1,7 +1,5 @@
 // Reset Password
-
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
 import Box from "@mui/material/Box";
 import { CustomTextField, CommonButton } from "components/ui/index";
@@ -14,46 +12,44 @@ import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import "./reset-password.scss";
 
 const ResetPassword = () => {
-	
-	const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState(false);
 
-	return (
-		<React.Fragment>
-			<Box className="loginWrap">
-				<Box className="loginWrapInner">
+  return (
+    <React.Fragment>
+      <Box className="loginWrap">
+        <Box className="loginWrapInner">
 
-					<h1 className="loginTitle">Reset Password</h1>
+          <h1 className="loginTitle">Reset Password</h1>
 
-					<CustomTextField
-						name="password"
-						type={isVisible ? "text" : "password"}
-						id="newPassword"
-						label="Enter New Password*"
-						InputProps={{
-							endAdornment: (
-								<InputAdornment position="end">
-									<IconButton
-										onClick={() => setIsVisible(!isVisible)}
-										edge="end"
-										className="visibilityIcon"
-									>
-										{isVisible ? <VisibilityOffOutlinedIcon /> : <VisibilityOutlinedIcon /> }
-									</IconButton>
-								</InputAdornment>
-							),
-						}}
-					/>
+          <CustomTextField
+            name="password"
+            type={isVisible ? "text" : "password"}
+            id="newPassword"
+            label="Enter New Password*"
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                <IconButton
+                  onClick={() => setIsVisible(!isVisible)}
+                  edge="end"
+                  className="visibilityIcon"
+                >
+                  {isVisible ? <VisibilityOffOutlinedIcon /> : <VisibilityOutlinedIcon /> }
+                </IconButton>
+                </InputAdornment>
+              )
+            }}
+          />
 
-					<CustomTextField label="Re-enter Password*" placeholder="mail@abc.com" />
-					
-					<Box sx={{ mt: 4 }}>
-						<CommonButton label="Reset Password" className={"backround"} />
-					</Box>
-					
-				</Box>				
-			</Box>
-		</React.Fragment>
-	);
+          <CustomTextField label="Re-enter Password*" placeholder="mail@abc.com" />
+
+          <Box sx={{ mt: 4 }}>
+          <CommonButton label="Reset Password" className={"backround"} />
+          </Box>
+        </Box>
+      </Box>
+    </React.Fragment>
+  );
 };
 
 export default ResetPassword;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./AccountKYC.scss";
 import Box from "@mui/material/Box";
-import { CustomTextField, CommonButton } from "components/ui/index";
+import { CustomTextField } from "components/ui/index";
 import { Link } from "react-router-dom";
 
 const AccountKYC = () => {
@@ -10,8 +10,9 @@ const AccountKYC = () => {
   return (
     <Box className="accountkyc">
       <Box className="accountkycInner">
-        {!kycVerify ? (
-          <Box>
+        {
+        !kycVerify
+          ? <Box>
             <h1 className="accountkycTitle">Personal Information</h1>
             <Box className="between-align" sx={{ mb: 3 }}>
               <Box className="textPrimary">
@@ -44,8 +45,7 @@ const AccountKYC = () => {
               disabled
             />
           </Box>
-        ) : (
-          <Box>
+          : <Box>
             <h1 className="accountkycTitle">KYC Details</h1>
             <Box className="between-align" sx={{ mb: 3 }}>
               <Box className="textPrimary">
@@ -65,7 +65,7 @@ const AccountKYC = () => {
               </Link>
             </Box>
           </Box>
-        )}
+        }
       </Box>
     </Box>
   );
