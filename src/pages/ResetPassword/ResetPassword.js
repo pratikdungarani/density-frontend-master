@@ -41,7 +41,7 @@ const ResetPassword = () => {
             }}
           />
 
-          <CustomTextField label="Re-enter Password*" placeholder="mail@abc.com" />
+          <CustomTextField name="confirmPassword" label="Re-enter Password*" placeholder="mail@abc.com" />
 
           <Box sx={{ mt: 4 }}>
           <CommonButton label="Reset Password" className={"backround"} />

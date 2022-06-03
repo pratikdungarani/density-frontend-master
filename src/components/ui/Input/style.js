@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 const useStyle = makeStyles((theme) => ({
   helperText: {
     "&.MuiFormHelperText-root": {
-      lineHeight: 0.66,
+      lineHeight: 1,
       marginLeft: theme.spacing(0)
     }
   },

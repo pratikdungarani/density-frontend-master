@@ -10,42 +10,27 @@ const AccountKYC = () => {
   return (
     <Box className="accountkyc">
       <Box className="accountkycInner">
-        {
-        !kycVerify
-          ? <Box>
+        {!kycVerify ? (
+          <Box>
             <h1 className="accountkycTitle">Personal Information</h1>
             <Box className="between-align" sx={{ mb: 3 }}>
               <Box className="textPrimary">
                 <h6>KYC Status</h6>
               </Box>
               <Box className="verifiedLinks">
-                <p
-                  className="success pointer"
-                  onClick={() => setKycVerify(!kycVerify)}
-                >
+                <p className="success pointer" onClick={() => setKycVerify(!kycVerify)}>
                   Verifed
                 </p>
               </Box>
             </Box>
-            <CustomTextField label="First name" placeholder="John" disabled />
-            <CustomTextField label="Last name" placeholder="Doe" disabled />
-            <CustomTextField
-              label="Country"
-              placeholder="mail@abc.com"
-              disabled
-            />
-            <CustomTextField
-              label="Aadhar Number"
-              placeholder="XXXX XXXX XXXX XXXX"
-              disabled
-            />
-            <CustomTextField
-              label="PAN Number"
-              placeholder="ABCDE1234F"
-              disabled
-            />
+            <CustomTextField name="firstname" label="First name" placeholder="John" disabled />
+            <CustomTextField name="lastname" label="Last name" placeholder="Doe" disabled />
+            <CustomTextField name="country" label="Country" placeholder="mail@abc.com" disabled />
+            <CustomTextField name="adharno" label="Aadhar Number" placeholder="XXXX XXXX XXXX XXXX" disabled />
+            <CustomTextField name="panNo" label="PAN Number" placeholder="ABCDE1234F" disabled />
           </Box>
-          : <Box>
+        ) : (
+          <Box>
             <h1 className="accountkycTitle">KYC Details</h1>
             <Box className="between-align" sx={{ mb: 3 }}>
               <Box className="textPrimary">
@@ -56,8 +41,7 @@ const AccountKYC = () => {
               </Box>
             </Box>
             <Box component="p" className="textCenter texGray authMessage">
-              Two Factor Authentication enabled. This helps keep your account
-              safe. We strongly recommend you keep 2FA turned on.
+              Two Factor Authentication enabled. This helps keep your account safe. We strongly recommend you keep 2FA turned on.
             </Box>
             <Box>
               <Link to="/accountProfileKYC" className="buttonCommon backround">
@@ -65,7 +49,7 @@ const AccountKYC = () => {
               </Link>
             </Box>
           </Box>
-        }
+        )}
       </Box>
     </Box>
   );

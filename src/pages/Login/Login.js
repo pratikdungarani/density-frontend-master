@@ -24,7 +24,7 @@ const Login = () => {
         </h4>
         <Box className="loginWrapInner">
           <h1 className="loginTitle">Login to your Account</h1>
-          <CustomTextField label="Email" placeholder="mail@abc.com" />
+          <CustomTextField name="email" label="Email" placeholder="mail@abc.com" />
           <CustomTextField
             name="password"
             type={isVisible ? "text" : "password"}
@@ -67,7 +67,7 @@ const Login = () => {
             </button>
           </Box>
           <Box sx={{ mt: 4 }}>
-            <CommonButton label="Login" className={"backround"} />
+            <CommonButton label="Login" className={"backround"} type="submit" />
           </Box>
         </Box>
         <Box sx={{ my: 3 }} className="textSecondary textCenter">

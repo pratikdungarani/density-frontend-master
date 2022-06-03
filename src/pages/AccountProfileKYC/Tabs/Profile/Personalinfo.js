@@ -36,10 +36,11 @@ const Signup = () => {
               <p className="success pointer">Verifed</p>
             </Box>
           </Box>
-          <CustomTextField label="First name" placeholder="John" Required disabled />
-          <CustomTextField label="Last name" placeholder="Doe" Required disabled />
-          <CustomTextField label="Email" placeholder="mail@abc.com" Required disabled/>
+          <CustomTextField name="firstname" label="First name" placeholder="John" Required disabled />
+          <CustomTextField name="lastname" label="Last name" placeholder="Doe" Required disabled />
+          <CustomTextField name="email" label="Email" placeholder="mail@abc.com" Required disabled/>
           <CustomTextField
+            name="phone"
             label="Phone Number"
             placeholder="9123456789"
             Required

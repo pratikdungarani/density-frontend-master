@@ -19,11 +19,11 @@ const BankAccount = () => {
             <MenuItem value={"bank-2"}>Bank 2</MenuItem>
           </CustomSelectField>
 
-          <CustomTextField label="Account Holder's Name*" placeholder="John Doe" />
+          <CustomTextField name="accountHolder" label="Account Holder's Name*" placeholder="John Doe" />
 
-          <CustomTextField label="Account Number*" placeholder="1234567890" />
+          <CustomTextField name="accountNumber" label="Account Number*" placeholder="1234567890" />
 
-          <CustomTextField label="IFSC Code*" placeholder="ABCDE12345" />
+          <CustomTextField name="ifsc" label="IFSC Code*" placeholder="ABCDE12345" />
 
           <Box sx={{ mt: 4 }}>
             <CommonButton label="Add Account" className={"backround"} />

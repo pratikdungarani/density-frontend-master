@@ -4,20 +4,18 @@ import PropTypes from "prop-types";
 // material UI
 import { InputLabel, TextField } from "@mui/material";
 
+// npm package
+import { useField } from "formik";
+
 // style
 import useStyles from "./style";
 
-const CustomTextField = ({
-  name,
-  label,
-  multiline,
-  rows,
-  Required,
-  ...rest
-}) => {
+const CustomTextField = ({ name, label, multiline, rows, Required, ...rest }) => {
   const classes = useStyles();
+  const [field, meta] = useField(name);
 
   const configTextField = {
+    ...field,
     ...rest,
     size: "small",
     multiline: multiline,
@@ -25,6 +23,11 @@ const CustomTextField = ({
     className: classes.textField,
     variant: "outlined"
   };
+
+  if (meta && meta.touched && meta.error) {
+    configTextField.error = true;
+    configTextField.helperText = meta.error;
+  }
 
   return (
     <React.Fragment>
