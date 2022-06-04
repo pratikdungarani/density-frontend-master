@@ -36,12 +36,12 @@ const Login = ({ openPasswordreset }) => {
           <h1 className="securityTitle">Reset Password</h1>
           <Formik initialValues={initialValues} onSubmit={(value) => sendPasswordReset(value)}>
             {() => (
-              <Form id="Personal-form">
+              <Form id="PasswordReset-form">
                 <CustomTextField
                   name="oldpassword"
                   type={isVisible ? "text" : "password"}
                   id="oldpassword"
-                  label="old Password"
+                  label="Old Password"
                   InputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
