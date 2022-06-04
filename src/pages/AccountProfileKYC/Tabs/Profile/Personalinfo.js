@@ -43,7 +43,7 @@ const Signup = () => {
           </Stack>
           <Formik initialValues={initialValues} onSubmit={(value) => sendPersonalInfo(value)}>
         {() => (
-          <Form id="signup-form">
+          <Form id="Personal-form">
           <Box className="between-align">
             <Box className="textPrimary">
               <h6>KYC Status</h6>

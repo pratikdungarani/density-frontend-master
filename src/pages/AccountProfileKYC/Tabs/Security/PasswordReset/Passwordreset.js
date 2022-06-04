@@ -4,6 +4,9 @@ import { IconButton, InputAdornment } from "@mui/material";
 
 import PropTypes from "prop-types";
 
+// Formik
+import { Formik, Form } from "formik";
+
 // MUI Icons
 import VisibilityOffOutlinedIcon from "@mui/icons-material/VisibilityOffOutlined";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
@@ -17,84 +20,74 @@ const Login = ({ openPasswordreset }) => {
   const [isVisiblenew, setIsVisiblenew] = React.useState(false);
   const [isVisibleconfirm, setIsVisibleconfirm] = React.useState(false);
 
+  // Initial Value
+  const initialValues = {
+    oldpassword: "",
+    newpassword: "",
+    confirmpassword: ""
+  };
+
+  const sendPasswordReset = (value) => {};
+
   return (
     <>
       <Box className="security">
         <Box className="securityInner">
           <h1 className="securityTitle">Reset Password</h1>
-          <CustomTextField
-            name="oldpassword"
-            type={isVisible ? "text" : "password"}
-            id="oldpassword"
-            label="old Password"
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton
-                    onClick={() => setIsVisible(!isVisible)}
-                    edge="end"
-                    className="visibilityIcon"
-                  >
-                    {isVisible
-                      ? <VisibilityOffOutlinedIcon />
-                      : <VisibilityOutlinedIcon />
-                    }
-                  </IconButton>
-                </InputAdornment>
-              )
-            }}
-          />
-          <CustomTextField
-            name="Newpassword"
-            type={isVisiblenew ? "text" : "password"}
-            id="Newpassword"
-            label="New Password"
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton
-                    onClick={() => setIsVisiblenew(!isVisiblenew)}
-                    edge="end"
-                    className="visibilityIcon"
-                  >
-                  {isVisible
-                    ? <VisibilityOffOutlinedIcon />
-                    : <VisibilityOutlinedIcon />
-                  }
-                  </IconButton>
-                </InputAdornment>
-              )
-            }}
-          />
-          <CustomTextField
-            name="Confirmpassword"
-            type={isVisibleconfirm ? "text" : "password"}
-            id="Confirmpassword"
-            label="Confirm Password"
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton
-                    onClick={() => setIsVisibleconfirm(!isVisibleconfirm)}
-                    edge="end"
-                    className="visibilityIcon"
-                  >
-                  {isVisible
-                    ? <VisibilityOffOutlinedIcon />
-                    : <VisibilityOutlinedIcon />
-                  }
-                  </IconButton>
-                </InputAdornment>
-              )
-            }}
-          />
-          <Box sx={{ mt: 4 }}>
-            <CommonButton
-              label="Password Reset"
-              className="backround"
-              onChange={openPasswordreset}
-            />
-          </Box>
+          <Formik initialValues={initialValues} onSubmit={(value) => sendPasswordReset(value)}>
+            {() => (
+              <Form id="Personal-form">
+                <CustomTextField
+                  name="oldpassword"
+                  type={isVisible ? "text" : "password"}
+                  id="oldpassword"
+                  label="old Password"
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton onClick={() => setIsVisible(!isVisible)} edge="end" className="visibilityIcon">
+                          {isVisible ? <VisibilityOffOutlinedIcon /> : <VisibilityOutlinedIcon />}
+                        </IconButton>
+                      </InputAdornment>
+                    )
+                  }}
+                />
+                <CustomTextField
+                  name="newpassword"
+                  type={isVisiblenew ? "text" : "password"}
+                  id="Newpassword"
+                  label="New Password"
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton onClick={() => setIsVisiblenew(!isVisiblenew)} edge="end" className="visibilityIcon">
+                          {isVisible ? <VisibilityOffOutlinedIcon /> : <VisibilityOutlinedIcon />}
+                        </IconButton>
+                      </InputAdornment>
+                    )
+                  }}
+                />
+                <CustomTextField
+                  name="confirmpassword"
+                  type={isVisibleconfirm ? "text" : "password"}
+                  id="Confirmpassword"
+                  label="Confirm Password"
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <IconButton onClick={() => setIsVisibleconfirm(!isVisibleconfirm)} edge="end" className="visibilityIcon">
+                          {isVisible ? <VisibilityOffOutlinedIcon /> : <VisibilityOutlinedIcon />}
+                        </IconButton>
+                      </InputAdornment>
+                    )
+                  }}
+                />
+                <Box sx={{ mt: 4 }}>
+                  <CommonButton label="Password Reset" className="backround" onChange={openPasswordreset} />
+                </Box>
+              </Form>
+            )}
+          </Formik>
         </Box>
       </Box>
     </>

@@ -5,8 +5,8 @@ import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import PersonalInfo from "./Tabs/Profile/Personalinfo";
-// import Security from "./Tabs/Security/Security";
-// import AccountKYC from "./Tabs/AccountKYC/AccountKYC";
+import Security from "./Tabs/Security/Security";
+import AccountKYC from "./Tabs/AccountKYC/AccountKYC";
 // import Account from "./Tabs/Accounts/Account";
 
 import "./AccountProfileKYC.scss";
@@ -43,10 +43,10 @@ export default function LabTabs() {
           <PersonalInfo />
         </TabPanel>
         <TabPanel value="2">
-          {/* <Security /> */}
+          <Security />
         </TabPanel>
         <TabPanel value="3">
-          {/* <AccountKYC /> */}
+          <AccountKYC />
         </TabPanel>
         <TabPanel value="4">
           {/* <Account /> */}

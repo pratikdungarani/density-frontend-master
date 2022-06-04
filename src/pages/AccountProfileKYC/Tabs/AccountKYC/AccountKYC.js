@@ -52,7 +52,7 @@ const AccountKYC = () => {
 
   return (
     <Box className="accountkyc">
-      <Box className="accountkycInner">{AccountKYC()}</Box>
+      <Box className="accountkycInner">{AccountKYC}</Box>
     </Box>
   );
 };
