@@ -7,6 +7,9 @@ import { CustomTextField, CommonButton } from "components/ui/index";
 
 import "./Personalinfo.scss";
 
+// Formik
+import { Formik, Form } from "formik";
+
 const Signup = () => {
   const [isVisible, setIsVisible] = React.useState(true);
 
@@ -18,6 +21,18 @@ const Signup = () => {
     setIsVisible(true);
   };
 
+  // Initial Value
+  const initialValues = {
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: ""
+  };
+
+  const sendPersonalInfo = (value) => {
+
+  };
+
   return (
     <>
       <Box className="profileInfo">
@@ -26,6 +41,9 @@ const Signup = () => {
           <Stack direction="row" className="stack" >
            <Avatar className="Avatar">VK</Avatar>
           </Stack>
+          <Formik initialValues={initialValues} onSubmit={(value) => sendPersonalInfo(value)}>
+        {() => (
+          <Form id="signup-form">
           <Box className="between-align">
             <Box className="textPrimary">
               <h6>KYC Status</h6>
@@ -61,6 +79,9 @@ const Signup = () => {
             </Box>
           </Box>
         }
+         </Form>
+        )}
+       </Formik>
         </Box>
       </Box>
     </>
