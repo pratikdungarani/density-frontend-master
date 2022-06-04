@@ -53,7 +53,7 @@ const Account = () => {
             </div>
             </Box>
             <Box sx={{ mt: 4 }}>
-            <CommonButton label="Add bank Account" className={"backround"} onClick={() => AccountNew()} />
+              <CommonButton label="Add bank Account" className={"backround"} onClick={() => AccountNew()} />
             </Box>
         </Box>
         </Box>
