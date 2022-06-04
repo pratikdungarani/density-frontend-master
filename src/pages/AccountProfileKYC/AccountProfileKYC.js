@@ -26,16 +26,10 @@ export default function LabTabs() {
   return (
     <Box sx={{ width: "100%", typography: "body1" }}>
       <TabContext value={value}>
-        <Box className="mainTab">
-          <TabList
-            onChange={handleChange}
-            aria-label="lab API tabs example"
-            className="TabList"
-          >
+        <Box className="mainTab" sx={{ p: 4 }}>
+          <TabList onChange={handleChange} aria-label="lab API tabs example" className="TabList">
             {List.map((item) => {
-              return (
-                <Tab label={item.label} value={item.value} className="Tab" key={item.label} />
-              );
+              return <Tab label={item.label} value={item.value} className="Tab" key={item.label} />;
             })}
           </TabList>
         </Box>
@@ -48,9 +42,7 @@ export default function LabTabs() {
         <TabPanel value="3">
           <AccountKYC />
         </TabPanel>
-        <TabPanel value="4">
-          {/* <Account /> */}
-        </TabPanel>
+        <TabPanel value="4">{/* <Account /> */}</TabPanel>
       </TabContext>
     </Box>
   );
