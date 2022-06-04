@@ -7,7 +7,7 @@ import TabPanel from "@mui/lab/TabPanel";
 import PersonalInfo from "./Tabs/Profile/Personalinfo";
 import Security from "./Tabs/Security/Security";
 import AccountKYC from "./Tabs/AccountKYC/AccountKYC";
-// import Account from "./Tabs/Accounts/Account";
+import Account from "./Tabs/Accounts/Account";
 
 import "./AccountProfileKYC.scss";
 export default function LabTabs() {
@@ -42,7 +42,9 @@ export default function LabTabs() {
         <TabPanel value="3">
           <AccountKYC />
         </TabPanel>
-        <TabPanel value="4">{/* <Account /> */}</TabPanel>
+        <TabPanel value="4">
+          <Account />
+        </TabPanel>
       </TabContext>
     </Box>
   );
