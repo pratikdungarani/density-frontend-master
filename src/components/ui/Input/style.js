@@ -21,12 +21,15 @@ const useStyle = makeStyles((theme) => ({
     color: theme.palette.primary.main
   },
   textField: {
+    "&.MuiTextField-root": {
+      background: theme.palette.common.inputbackground
+    },
     "& .MuiOutlinedInput-input": {
       height: "1.7em",
       "min-height": "1.7em",
       lineHeight: "1.7em",
       color: theme.palette.primary.main,
-      background: theme.palette.common.inputbackground,
+      // background: theme.palette.common.inputbackground,
       fontFamily: theme.typography.fontFamily,
       borderRadius: "5px",
       "&.Mui-disabled": {

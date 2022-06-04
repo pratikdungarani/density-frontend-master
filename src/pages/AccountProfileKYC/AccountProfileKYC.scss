@@ -1,3 +1,5 @@
+@import  '../../assets/styles/mixins.scss';
+
 .TabList{
     color: azure;
     background-color:#4F4F4F;
@@ -12,4 +14,29 @@
 .Tab{
     border-radius: 5;
     border: "1px solid black";
+}
+
+.TabList {
+    background: rgba(79, 79, 79, 0.15);
+    border-radius: 6px;
+    min-height: auto !important;
+    height: auto;
+    overflow: auto !important;
+
+    .Tab {
+        @include FontStyle(14, 18, 400);
+        text-transform: capitalize;
+        color: #4F4F4F;
+        padding: 6px 23px;
+        min-height: auto;
+        
+        &.Mui-selected {
+            border: 1px solid #333333;
+            color: #FCFCFC;    
+        }
+    }
+
+    .MuiTabs-indicator {
+        display: none !important;
+    }
 }
