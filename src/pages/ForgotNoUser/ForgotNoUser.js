@@ -25,7 +25,7 @@ const ForgotNoUser = () => {
           <h1 className="loginTitle">Forgot 2FA? </h1>
           <Formik initialValues={initialValues} onSubmit={(value) => twoFactorSubmit(value)}>
             {() => (
-              <Form id="ForgotFa-form">
+              <Form id="ForgotNoUser-form">
                 <Box>
                   <FormControlLabel control={<Checkbox size="small" />} label="I remember my user ID" className="textPrimary rememberText" />
                 </Box>

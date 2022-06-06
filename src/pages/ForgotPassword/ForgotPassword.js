@@ -9,6 +9,12 @@ import { CustomTextField, CommonButton } from "components/ui/index";
 import "./forgot-password.scss";
 // Formik
 import { Formik, Form } from "formik";
+import * as Yup from "yup";
+
+// Validation
+const validationSchema = Yup.object().shape({
+  regemail: Yup.string().required("Email is required").email()
+});
 
 const ForgotPassword = () => {
   const initialValues = {
@@ -23,9 +29,9 @@ const ForgotPassword = () => {
       <Box className="loginWrap">
         <Box className="loginWrapInner">
           <h1 className="loginTitle">Forgot Password?</h1>
-          <Formik initialValues={initialValues} onSubmit={(value) => forgotSubmit(value)}>
+          <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={(value) => forgotSubmit(value)}>
             {() => (
-              <Form id="ForgotFa-form">
+              <Form id="ForgotPassword-form">
                 <CustomTextField name="regemail" label="Registered Email*" placeholder="mail@abc.com" />
                 <Box>
                   <CustomTextField name="emailOtp" label="Email OTP" placeholder="****" />

@@ -12,9 +12,21 @@ import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import "./reset-password.scss";
 // Formik
 import { Formik, Form } from "formik";
+import * as Yup from "yup";
 
+const passwordRegExp = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{10,}$";
+// Validation
+const validationSchema = Yup.object().shape({
+  password: Yup.string()
+    .required("Password is required")
+    .matches(passwordRegExp, "Passwords shall have a minimum of 10 characters with a mix of alphabets, number, alphanumeric and special characters"),
+  confirmPassword: Yup.string()
+    .oneOf([Yup.ref("password")], "Password didn't match. Try again")
+    .required("ConfirmPassword is required")
+});
 const ResetPassword = () => {
   const [isVisible, setIsVisible] = React.useState(false);
+
   const initialValues = {
     password: "",
     confirmPassword: ""
@@ -25,13 +37,12 @@ const ResetPassword = () => {
       <Box className="loginWrap">
         <Box className="loginWrapInner">
           <h1 className="loginTitle">Reset Password</h1>
-          <Formik initialValues={initialValues} onSubmit={(value) => resetSubmit(value)}>
+          <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={(value) => resetSubmit(value)}>
             {() => (
-              <Form id="ForgotFa-form">
+              <Form id="ResetPassword-form">
                 <CustomTextField
                   name="password"
                   type={isVisible ? "text" : "password"}
-                  id="newPassword"
                   label="Enter New Password*"
                   InputProps={{
                     endAdornment: (
@@ -43,9 +54,7 @@ const ResetPassword = () => {
                     )
                   }}
                 />
-
                 <CustomTextField name="confirmPassword" label="Re-enter Password*" placeholder="mail@abc.com" />
-
                 <Box sx={{ mt: 4 }}>
                   <CommonButton label="Reset Password" className={"backround"} />
                 </Box>

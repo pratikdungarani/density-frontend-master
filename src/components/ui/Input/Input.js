@@ -52,6 +52,7 @@ const CustomTextField = ({ name, label, multiline, rows, Required, ...rest }) =>
         fullWidth
         multiline={multiline}
         rows={rows}
+        autoComplete="off"
       />
     </React.Fragment>
   );

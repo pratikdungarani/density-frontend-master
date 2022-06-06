@@ -26,7 +26,7 @@ export default function LabTabs() {
   return (
     <Box sx={{ width: "100%", typography: "body1" }}>
       <TabContext value={value}>
-        <Box className="mainTab" sx={{ p: 4 }}>
+        <Box className="mainTab" sx={{ p: 3 }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example" className="TabList">
             {List.map((item) => {
               return <Tab label={item.label} value={item.value} className="Tab" key={item.label} />;

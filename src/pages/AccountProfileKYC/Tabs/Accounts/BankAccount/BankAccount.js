@@ -25,7 +25,7 @@ const BankAccount = () => {
           <h1 className="loginTitle">Add Bank Account</h1>
           <Formik initialValues={initialValues} onSubmit={(value) => accountSubmit(value)}>
             {() => (
-              <Form id="account-form">
+              <Form id="bankAccount-form">
                 <CustomSelectField label="Select Bank*" placeholder="mail@abc.com" value="bank-1">
                   <MenuItem value={"bank-1"}>Bank 1</MenuItem>
                   <MenuItem value={"bank-2"}>Bank 2</MenuItem>

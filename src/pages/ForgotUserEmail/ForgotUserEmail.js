@@ -26,7 +26,7 @@ const ForgotUserEmail = () => {
           <h1 className="loginTitle">Forgot 2FA? </h1>
           <Formik initialValues={initialValues} onSubmit={(value) => twoFactorSubmit(value)}>
             {() => (
-              <Form id="ForgotFa-form">
+              <Form id="ForgotUserEmail-form">
           <Box>
           <FormControlLabel
             control={<Checkbox defaultChecked size="small" />}
