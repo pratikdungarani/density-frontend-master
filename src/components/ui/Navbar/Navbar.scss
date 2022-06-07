@@ -13,16 +13,52 @@
         background-color: $primary-background;
         display: flex;
     }
-
+    &-relative{
+        position: relative;
+    }
+    &-manu_ul {
+        @include centre-align();
+        @include mediaQuery(640px){
+            display: none;
+        }
+        &.active_menu{
+            display: block;
+            background: $primary-background;
+            position: absolute;
+            top: 100%;
+            width: 150px;
+            border: 1px solid $primary-border-grey;
+            border-radius: 5px;
+            .MuiTypography-root{
+                padding: 10px;
+            }
+        }
+    }
+    &-menu-toggle{
+        display: none;
+        @include mediaQuery(640px){
+            display: inline-block;
+        }
+    }
     &-toolbar-text{
         @extend .font-bold;
-        @include centre-align();
+        &.MuiTypography-root{
+            margin: 0 40px;
+            @include mediaQuery(768px){
+                @include FontStyle(16,20);
+                margin: 0 10px;
+            }
+        }
     }
     &-toolbar-icons{
-        color: $header-text-color;
         margin-left: auto;
+        &.MuiButtonBase-root{
+            color: $header-text-color;
+        }
      }
     &-toolbar-icon{
-       color: $header-text-color;
+        &.MuiButtonBase-root{
+            color: $header-text-color;
+        }
     }
 }

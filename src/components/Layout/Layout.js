@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 export const Layout = ({ children }) => {
   return (
     <>
-      <Navbar />
+      <Navbar isLoggedIn />
       <div className="pageContent">
         {children}
       </div>
