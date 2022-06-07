@@ -4,12 +4,13 @@ import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import PersonalInfo from "./Tabs/Profile/Personalinfo";
-import Security from "./Tabs/Security/Security";
-import AccountKYC from "./Tabs/AccountKYC/AccountKYC";
-import Account from "./Tabs/Accounts/Account";
+import PersonalInfo from "./AccountTabs/AccountProfile/Personalinfo";
+import Security from "./AccountTabs/AccountSecurity/Security";
+import AccountKYC from "./AccountTabs/AccountKYC/AccountKYC";
+import Account from "./AccountTabs/Accounts/Account";
 
 import "./AccountProfileKYC.scss";
+
 export default function LabTabs() {
   const [value, setValue] = React.useState("1");
   console.log("value", value);
