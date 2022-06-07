@@ -15,15 +15,15 @@ import { CustomTextField, CommonButton } from "components/ui/index";
 
 import "./Passwordreset.scss";
 
-const passwordRegExp = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{10,}$";
+import { Regx } from "utils/constants";
 
 const validationSchema = Yup.object().shape({
   oldpassword: Yup.string()
     .required("Password is required")
-    .matches(passwordRegExp, "Passwords shall have a minimum of 10 characters with a mix of alphabets, number, alphanumeric and special characters"),
+    .matches(Regx.passwordRegExp, "Passwords shall have a minimum of 10 characters with a mix of alphabets, number, alphanumeric and special characters"),
   newpassword: Yup.string()
     .required("New Password is required")
-    .matches(passwordRegExp, "Passwords shall have a minimum of 10 characters with a mix of alphabets, number, alphanumeric and special characters"),
+    .matches(Regx.passwordRegExp, "Passwords shall have a minimum of 10 characters with a mix of alphabets, number, alphanumeric and special characters"),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref("newpassword")], "Confirm Password didn't match with New Password. Try again")
     .required("ConfirmPassword is required")

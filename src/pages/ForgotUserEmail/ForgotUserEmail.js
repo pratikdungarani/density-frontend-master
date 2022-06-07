@@ -21,8 +21,8 @@ const ForgotUserEmail = () => {
   const twoFactorSubmit = (value) => {};
   return (
     <React.Fragment>
-      <Box className="loginWrap">
-        <Box className="loginWrapInner">
+      <Box className="forgotUser">
+        <Box className="forgotUserInner">
           <h1 className="loginTitle">Forgot 2FA? </h1>
           <Formik initialValues={initialValues} onSubmit={(value) => twoFactorSubmit(value)}>
             {() => (

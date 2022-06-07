@@ -26,8 +26,8 @@ const ForgotPassword = () => {
 
   return (
     <React.Fragment>
-      <Box className="loginWrap">
-        <Box className="loginWrapInner">
+      <Box className="forgotPasswordWrap">
+        <Box className="forgotPasswordWrapInner">
           <h1 className="loginTitle">Forgot Password?</h1>
           <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={(value) => forgotSubmit(value)}>
             {() => (

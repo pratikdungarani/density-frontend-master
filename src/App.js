@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Theme
-import theme from "theme";
+import theme from "theme/theme";
 import { ThemeProvider } from "@mui/styles";
 // Css
-
+import "./app.scss";
 // Components
 import Layout from "components/Layout/Layout";
 

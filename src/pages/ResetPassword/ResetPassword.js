@@ -14,12 +14,13 @@ import "./reset-password.scss";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
-const passwordRegExp = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{10,}$";
+import { Regx } from "utils/constants";
+
 // Validation
 const validationSchema = Yup.object().shape({
   password: Yup.string()
     .required("Password is required")
-    .matches(passwordRegExp, "Passwords shall have a minimum of 10 characters with a mix of alphabets, number, alphanumeric and special characters"),
+    .matches(Regx.passwordRegExp, "Passwords shall have a minimum of 10 characters with a mix of alphabets, number, alphanumeric and special characters"),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref("password")], "Password didn't match. Try again")
     .required("ConfirmPassword is required")
@@ -34,8 +35,8 @@ const ResetPassword = () => {
   const resetSubmit = (value) => {};
   return (
     <React.Fragment>
-      <Box className="loginWrap">
-        <Box className="loginWrapInner">
+      <Box className="resetPasswordWrap">
+        <Box className="resetPasswordWrapInner">
           <h1 className="loginTitle">Reset Password</h1>
           <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={(value) => resetSubmit(value)}>
             {() => (

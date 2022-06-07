@@ -8,22 +8,21 @@ import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import { CustomTextField, CommonButton } from "components/ui/index";
 import { Link, useNavigate } from "react-router-dom";
 import "./signup.scss";
+import { Regx } from "utils/constants";
 
 // Formik
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 
-const phoneRegExp = /^[+]?(?:[0-9]{2})?[0-9]{10}$/;
-const passwordRegExp = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{10,}$";
 // Validation
 const validationSchema = Yup.object().shape({
-  firstname: Yup.string().required("Firstname is required"),
-  lastname: Yup.string().required("Lastname is required"),
-  phone: Yup.string().required("Phone number is required").matches(phoneRegExp, "Enter valid phone number"),
+  firstName: Yup.string().required("FirstName is required"),
+  lastName: Yup.string().required("LastName is required"),
+  phone: Yup.string().required("Phone number is required").matches(Regx.phoneRegExp, "Enter valid phone number"),
   email: Yup.string().required("Email is required").email(),
   password: Yup.string()
     .required("Password is required")
-    .matches(passwordRegExp, "Passwords shall have a minimum of 10 characters with a mix of alphabets, number, alphanumeric and special characters"),
+    .matches(Regx.passwordRegExp, "Passwords shall have a minimum of 10 characters with a mix of alphabets, number, alphanumeric and special characters"),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref("password")], "Password didn't match. Try again")
     .required("ConfirmPassword is required")
@@ -36,12 +35,12 @@ const Signup = () => {
 
   // Initial Value
   const initialValues = {
-    firstname: "",
-    lastname: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     password: "",
-    cpassword: "",
+    confirmPassword: "",
     referral: ""
   };
 
@@ -58,8 +57,8 @@ const Signup = () => {
             <Box className="signupWrap">
               <Box className="signupWrapInner">
                 <h1 className="signupTitle">New user? Get started now</h1>
-                <CustomTextField name="firstname" label="First name" placeholder="John" Required />
-                <CustomTextField name="lastname" label="Last name" placeholder="Doe" Required />
+                <CustomTextField name="firstName" label="First name" placeholder="John" Required />
+                <CustomTextField name="lastName" label="Last name" placeholder="Doe" Required />
                 <CustomTextField name="email" label="Email" placeholder="mail@abc.com" Required />
                 <CustomTextField name="phone" label="Phone Number" placeholder="9123456789" Required />
                 <CustomTextField name="referral" label="Referral Code(Optional)" placeholder="ABC1245AS" />
